@@ -14,7 +14,7 @@ const Chat: React.FC = () => {
   const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>([]);
 
   useEffect(() => {
-    setMessages([{ text: 'Welcome! How can I assist you?', isBot: true }]);
+    setMessages([{ text: 'Welcome to the India Spice House! How may I assist you today?', isBot: true }]);
   }, []); 
 
   const handleSendMessage = (message: string) => {

@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 
+// Interface defining the structure of a cart item.
 interface CartItem {
   id: string;
   name: string;
@@ -12,9 +13,12 @@ interface CartItem {
 }
 
 const ProductCart: React.FC = () => {
+  // State to manage the list of items in the cart.
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [isCartOpen, setIsCartOpen] = useState(true);  // Define the isCartOpen state here
+  // State to manage the visibility of the cart sidebar.
+  const [isCartOpen, setIsCartOpen] = useState(true);
 
+  // Effect to load initial items into the cart.
   useEffect(() => {
     const initialItems: CartItem[] = [
       { id: 'curry1', name: 'Curry', price: 20.00, quantity: 2 },
@@ -24,20 +28,23 @@ const ProductCart: React.FC = () => {
     setCartItems(initialItems);
   }, []);
 
+  // Function to update the quantity of a specific item in the cart.
   const handleQuantityChange = (id: string, quantity: number) => {
     setCartItems(prevItems =>
       prevItems.map(item =>
         item.id === id ? { ...item, quantity: quantity } : item
-      ).filter(item => item.quantity > 0)
+      ).filter(item => item.quantity > 0) // Ensures items with zero quantity are removed.
     );
   };
 
+  // Function to calculate the total cost of the items in the cart.
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  // Function to toggle the visibility of the cart sidebar.
   const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);  // Correctly toggle the visibility of the cart
+    setIsCartOpen(!isCartOpen);
   };
 
   return (
@@ -48,7 +55,7 @@ const ProductCart: React.FC = () => {
       <div style={{
         position: 'fixed',
         top: 0,
-        right: isCartOpen ? 0 : '-500px',  // Use isCartOpen to control the sidebar position
+        right: isCartOpen ? 0 : '-500px',
         width: '500px',
         maxHeight: '100vh',
         backgroundColor: 'white',
@@ -57,7 +64,8 @@ const ProductCart: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        transition: 'right 0.3s ease-in-out'
+        transition: 'right 0.3s ease-in-out',
+        borderRadius: '10px'
       }}>
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>Shopping Cart</h2>
         {cartItems.length === 0 ? (

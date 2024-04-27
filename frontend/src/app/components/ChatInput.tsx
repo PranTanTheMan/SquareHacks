@@ -1,3 +1,4 @@
+// ChatInput.tsx
 "use client"
 
 import { useState } from 'react';
@@ -16,13 +17,20 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
+
   return (
     <div className="flex pt-5">
       <input
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 focus:outline-none focus:border-indigo-200 "
+        onKeyDown={handleKeyDown}  // Use onKeyDown instead of onKeyPress
+        className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 focus:outline-none focus:border-indigo-200"
         placeholder="Type your message..."
       />
       <button

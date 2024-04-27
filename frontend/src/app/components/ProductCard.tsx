@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+// Interface for props expected by the ProductCard component.
 interface ProductCardProps {
   id: string;
   name: string;
@@ -11,6 +12,7 @@ interface ProductCardProps {
   description: string;
 }
 
+// Component to display individual product details within the cart.
 const ProductCard: React.FC<ProductCardProps> = ({
   id,
   name,
