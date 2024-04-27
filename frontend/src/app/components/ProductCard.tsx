@@ -7,47 +7,51 @@ interface ProductCardProps {
   name: string;
   price: string;
   quantity: number;
-  handleAddProduct: () => void;
-  handleRemoveProduct: () => void;
+  handleQuantityChange: (id: string, quantity: number) => void;
   description: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   name,
   price,
   quantity,
-  handleAddProduct,
-  handleRemoveProduct,
+  handleQuantityChange,
   description,
 }) => {
   return (
     <div
       style={{
         width: '400px',
-        height: 'auto',
         backgroundColor: 'white',
         borderRadius: '8px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
         padding: '10px',
         margin: '10px',
       }}
     >
-      <h3 style={{ margin: '0', padding: '0' }}>{name}</h3>
-      <p style={{ margin: '0', padding: '0' }}>Price: {price}</p>
-      <p style={{ margin: '0', padding: '0' }}>Quantity: {quantity}</p>
-      <p style={{ margin: '0', padding: '0' }}>{description}</p>
-      <div style={{ display: 'flex', marginTop: '10px', width: '100%', justifyContent: 'space-between' }}>
-        <button onClick={handleRemoveProduct} style={{ color: 'red', width: '100px', height: '30px' }}>
-          -
-        </button>
-        <button onClick={handleAddProduct} style={{ color: 'red', width: '100px', height: '30px' }}>
-          +
-        </button>
+      <h3 style={{ margin: '0', padding: '0', fontWeight: 'bold', textAlign: 'left', width: '100%' }}>
+        {name}
+      </h3>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', width: '100%' }}>
+        <select
+          value={quantity}
+          onChange={(e) => handleQuantityChange(id, parseInt(e.target.value))}
+          style={{ margin: '0 5px 0 0', padding: '0', textAlign: 'right' }}
+        >
+          {Array.from({ length: 11 }, (_, i) => (
+            <option key={i} value={i}>{i}</option>
+          ))}
+        </select>
+        <span style={{ margin: '0', padding: '0', textAlign: 'right' }}>
+          x {price}
+        </span>
       </div>
+      <p style={{ margin: '0', padding: '0', textAlign: 'left', width: '100%' }}>
+        {description}
+      </p>
     </div>
   );
 };
