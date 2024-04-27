@@ -1,35 +1,38 @@
 // Chat.tsx
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 
 const Chat = () => {
-  const [messages, setMessages] = useState([{ text: 'Welcome to the India Spice House! How may I assist you today?', isBot: true }]);
+  const [messages, setMessages] = useState([{ text: 'Hey! Welcome to the India Spice House! I am your virtual waiter, would you like to order?', isBot: true }]);
+  const [showPayment, setShowPayment] = useState(false);
 
-  const handleSendMessage = async (message) => {
+  const handleSendMessage = async (message: string) => {
     setMessages(prevMessages => [...prevMessages, { text: message, isBot: false }]);
-    try {
-      // Send the user message to your API route
-      const response = await fetch('/api/openai', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message }),
-      });
-      const { botMessage } = await response.json();
-      setMessages(prevMessages => [...prevMessages, { text: botMessage, isBot: true }]);
-    } catch (error) {
-      console.error('Error fetching chat completion:', error);
-      setMessages(prevMessages => [...prevMessages, { text: 'Sorry, there was an error processing your request.', isBot: true }]);
+    if (/check\s*out/i.test(message.toLowerCase())) {
+      setShowPayment(true); // Show the Payment component
+    } else {
+      try {
+        // Simulate an API call to get a response from the chatbot
+        const botResponse = "How can I assist you further?";
+        setMessages(prevMessages => [...prevMessages, { text: botResponse, isBot: true }]);
+      } catch (error) {
+        console.error('Error fetching chat completion:', error);
+        setMessages(prevMessages => [...prevMessages, { text: 'Sorry, there was an error processing your request.', isBot: true }]);
+      }
     }
+  };
+
+  const handleOrderPlaced = () => {
+    
+    setMessages(prevMessages => [...prevMessages, { text: 'Your order has been successfully received and is being processed. Thank you for visiting The India Spice House and hope to see you soon!', isBot: true }]);
   };
 
   return (
     <div className="lg:w-3/5 p-8">
-      <ChatMessages messages={messages} />
+      <ChatMessages messages={messages} showPayment={showPayment} onOrderPlaced={handleOrderPlaced} />
       <ChatInput onSendMessage={handleSendMessage} />
     </div>
   );
