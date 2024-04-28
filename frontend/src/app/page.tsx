@@ -1,5 +1,5 @@
-import Chat from "./components/Chat";
-import ProductCart from "./components/ProductCart";
+import Chat from "../../components/Chat";
+import ProductCart from "../../components/ProductCart";
 
 export default function Home() {
   return (
