@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import Image from 'next/image';
 
 // Interface defining the structure of a cart item.
 interface CartItem {
@@ -10,6 +11,7 @@ interface CartItem {
   name: string;
   price: number;
   quantity: number;
+  description: string;
 }
 
 const ProductCart: React.FC = () => {
@@ -21,9 +23,9 @@ const ProductCart: React.FC = () => {
   // Effect to load initial items into the cart.
   useEffect(() => {
     const initialItems: CartItem[] = [
-      { id: 'curry1', name: 'Curry', price: 20.00, quantity: 2 },
-      { id: 'naan', name: 'Garlic Naan', price: 4.49, quantity: 1 },
-      { id: 'mango', name: 'Mango Lassi', price: 3.99, quantity: 1 }
+      { id: 'curry1', name: 'Curry', price: 20.00, quantity: 2, description: 'Please try our delicious curry' },
+      { id: 'naan', name: 'Garlic Naan', price: 4.49, quantity: 1, description: 'Please try our amazing naan' },
+      { id: 'mango', name: 'Mango Lassi', price: 3.99, quantity: 1, description:'our Mango Lassi is sure to cure your thirst' }
     ];
     setCartItems(initialItems);
   }, []);
@@ -50,7 +52,7 @@ const ProductCart: React.FC = () => {
   return (
     <>
       <button onClick={toggleCart} style={{ position: 'fixed', top: 0, right: 0, zIndex: 30 }}>
-        <img src="cart.png" alt="Toggle Cart" style={{ width: '40px', height: '40px' }} />
+        <Image src="/cart.png" width= {40} height={40} alt="Toggle Cart"/>
       </button>
       <div style={{
         position: 'fixed',
@@ -90,7 +92,7 @@ const ProductCart: React.FC = () => {
                 price={`$${item.price.toFixed(2)}`}
                 quantity={item.quantity}
                 handleQuantityChange={handleQuantityChange}
-                description="Please try our delicious, authentic curry"
+                description={item.description}
               />
             ))}
           </div>
