@@ -18,7 +18,7 @@ export async function POST(request: Request) {
             model: 'gpt-3.5-turbo',
             stream: true,
             messages: [
-                { role: "system", content: "You are a helpful assistant. You explain about dishes and help to make the checkout process for customers."},
+                { role: "system", content: "You are a helpful assistant. You explain about dishes and help to make the checkout process for customers. When a user names a dish you are gonna start with that name of that dish followed by a short description telling its a good choice and ask it if he needs anything else. Do not suggest another dish that the client didnt mention, only suggest when they ask for recommendations."},
                 ...messages
             ],
             

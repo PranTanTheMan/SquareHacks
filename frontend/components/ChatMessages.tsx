@@ -7,7 +7,11 @@ import ChatProduct from "./ChatProduct";
 
 interface ChatMessagesProps {
   messages: Message[];
-  handleFoods: (messages: Message) => boolean;
+  handleFoods: (message: Message) => {
+    name: string;
+    description: string;
+    price: number;
+  } | null;
 }
 
 const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods }) => {
@@ -52,7 +56,7 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods }) =>
             }
           })}
            <p className="text-sm text-gray-500">{message.role} {message.createdAt ? new Date(message.createdAt).toLocaleString() : 'Unknown Date'}</p>
-           {handleFoods(message) ? <ChatProduct /> : <></>}
+           {handleFoods(message) !== null ? <ChatProduct data={handleFoods(message)} /> : <></>}
            
           </div>
           
