@@ -6,21 +6,19 @@ import { useChat } from 'ai/react';
 import { Message } from 'ai';
 
 const Chat: React.FC = () => {
-
   const { input, handleInputChange, handleSubmit, messages } = useChat();
 
   console.log(messages);
   console.log(input);
 
-  const test = [ 
-    {name: "Curry", description: "fnfanf", price: 20},
-    {name: "Chicken", description: "fnfanf", price: 20},
-    {name: "Lemonade", description: "fnfanf", price: 20},
-    {name: "Butter chicken", description: "fnfanf", price: 20},
-    {name: "Beef", description: "fnfanf", price: 20},
-    {name: "Rice", description: "fnfanf", price: 20},
-    
-  ]
+  const test = [
+    { name: "Curry", description: "fnfanf", price: 20 },
+    { name: "Chicken", description: "fnfanf", price: 20 },
+    { name: "Lemonade", description: "fnfanf", price: 20 },
+    { name: "Butter chicken", description: "fnfanf", price: 20 },
+    { name: "Beef", description: "fnfanf", price: 20 },
+    { name: "Rice", description: "fnfanf", price: 20 },
+  ];
 
   const handleFoods = (message: Message) => {
     if (message.role === "assistant") {
@@ -33,10 +31,21 @@ const Chat: React.FC = () => {
     return null;
   };
 
+  const handleCheckout = (message: Message): string | "" => {
+    if (message.role === "assistant" && message.content.toLowerCase().includes("checkout")) {
+      return "Please put in your bank details below to place your order";
+    }
+    return "";
+  };
+
   return (
     <>
       <div className="lg:w-3/5 w-full p-8 h-screen">
-        <ChatMessages handleFoods={handleFoods} messages={messages} />
+        <ChatMessages 
+          handleFoods={handleFoods} 
+          handleCheckout={handleCheckout}
+          messages={messages} 
+        />
         <ChatInput handleSubmit={handleSubmit} handleInputChange={handleInputChange} input={input} />
       </div>
     </>
@@ -44,4 +53,3 @@ const Chat: React.FC = () => {
 };
 
 export default Chat;
-
