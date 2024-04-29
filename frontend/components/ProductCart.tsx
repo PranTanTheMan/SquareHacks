@@ -1,4 +1,3 @@
-// ProductCart.tsx
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -18,7 +17,7 @@ const ProductCart: React.FC = () => {
   // State to manage the list of items in the cart.
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   // State to manage the visibility of the cart sidebar.
-  const [isCartOpen, setIsCartOpen] = useState(true);
+  const [isCartOpen, setIsCartOpen] = useState(false); // Initially closed
 
   // Effect to load initial items into the cart.
   useEffect(() => {
@@ -51,57 +50,64 @@ const ProductCart: React.FC = () => {
 
   return (
     <>
-      <button onClick={toggleCart} style={{ position: 'fixed', top: 0, right: 0, zIndex: 30 }}>
-        <Image src="/cart.png" width= {40} height={40} alt="Toggle Cart"/>
+      <button onClick={toggleCart} className='fixed top-5 right-5 z-40 lg:hidden'>
+        <Image src="/cart.png" width={40} height={40} alt="Toggle Cart" />
       </button>
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        right: isCartOpen ? 0 : '-500px',
-        width: '500px',
-        maxHeight: '100vh',
-        backgroundColor: 'white',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        padding: '24px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        transition: 'right 0.3s ease-in-out',
-        borderRadius: '10px'
-      }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>Shopping Cart</h2>
-        {cartItems.length === 0 ? (
-          <div style={{
-            backgroundColor: 'lightblue',
-            color: 'darkblue',
-            width: '400px',
-            borderRadius: '8px',
-            padding: '10px',
-            textAlign: 'left',
-            margin: '10px auto'
-          }}>
-            Your Cart is empty. Please speak to our virtual assistant to start exploring our delicious menu!
+      <div className='hidden lg:rounded-lg lg:shadow-lg lg:m-8 lg:p-5 lg:block lg:h-full bg-white '>
+          <h2 className=' text-2xl font-bold mb-4' >Shopping Cart</h2>
+          {cartItems.length === 0 ? (
+            <div className='text-blue-600 bg-blue-200 w-[400px] rounded-lg p-3 text-left mx-auto my-3'>
+              Your Cart is empty. Please speak to our virtual assistant to start exploring our delicious menu!
+            </div>
+          ) : (
+            <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+              {cartItems.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  price={`$${item.price.toFixed(2)}`}
+                  quantity={item.quantity}
+                  handleQuantityChange={handleQuantityChange}
+                  description={item.description}
+                />
+              ))}
+            </div>
+          )}
+          <div>
+            <h3>Total: ${calculateTotal().toFixed(2)}</h3>
+            <p className='text-sm mt-4 text-gray-500'>Place your order for pick up today!</p>
           </div>
-        ) : (
-          <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
-            {cartItems.map((item) => (
-              <ProductCard
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                price={`$${item.price.toFixed(2)}`}
-                quantity={item.quantity}
-                handleQuantityChange={handleQuantityChange}
-                description={item.description}
-              />
-            ))}
-          </div>
-        )}
-        <div>
-          <h3>Total: ${calculateTotal().toFixed(2)}</h3>
-          <p style={{ fontSize: '14px', marginTop: '10px' }}>Place your order for pick up today!</p>
         </div>
-      </div>
+        
+      {isCartOpen && ( 
+        <div className='fixed top-0 right-0 mt-8 rounded-lg shadow-lg p-5 block h-auto bg-white lg:hidden'>
+          <h2 className=' text-2xl font-bold mb-4' >Shopping Cart</h2>
+          {cartItems.length === 0 ? (
+            <div className='text-blue-600 bg-blue-200 w-[400px] rounded-lg p-3 text-left mx-auto my-3'>
+              Your Cart is empty. Please speak to our virtual assistant to start exploring our delicious menu!
+            </div>
+          ) : (
+            <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+              {cartItems.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  price={`$${item.price.toFixed(2)}`}
+                  quantity={item.quantity}
+                  handleQuantityChange={handleQuantityChange}
+                  description={item.description}
+                />
+              ))}
+            </div>
+          )}
+          <div>
+            <h3>Total: ${calculateTotal().toFixed(2)}</h3>
+            <p className='text-sm mt-4 text-gray-500'>Place your order for pick up today!</p>
+          </div>
+        </div>
+      )}
     </>
   );
 };
