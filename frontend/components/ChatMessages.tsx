@@ -17,7 +17,7 @@ interface ChatMessagesProps {
 const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods }) => {
 
   return (
-    <div className="flex flex-col h-[600px] lg:h-[700px] overflow-y-auto bg-white shadow-lg rounded-lg pt-5">
+    <div className="flex flex-col h-5/6 overflow-y-auto bg-white shadow-lg rounded-lg pt-5">
       {/* Welcome message */}
       <div className="flex justify-start mb-4 mx-5">
         <Image

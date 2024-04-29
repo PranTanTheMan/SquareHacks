@@ -35,7 +35,7 @@ const Chat: React.FC = () => {
 
   return (
     <>
-      <div className="lg:w-3/5 p-8">
+      <div className="lg:w-3/5 w-full p-8 h-screen">
         <ChatMessages handleFoods={handleFoods} messages={messages} />
         <ChatInput handleSubmit={handleSubmit} handleInputChange={handleInputChange} input={input} />
       </div>
