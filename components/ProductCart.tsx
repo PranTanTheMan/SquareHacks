@@ -16,29 +16,25 @@ interface FoodItem {
 interface ProductCartProps {
   foods: any[];
   handleQuantityChange: (id: number, quantity: number) => void;
-  
 }
 
-const ProductCart: React.FC<ProductCartProps> = ({
-  foods,
-  handleQuantityChange,
-}) => {
+const ProductCart: React.FC<ProductCartProps> = ({ foods }) => {
   // Initialize cartItems state with the foods passed as props
   const [cartItems, setCartItems] = useState<FoodItem[]>(foods);
   // State to manage the visibility of the cart sidebar.
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   // Function to update the quantity of a specific item in the cart.
-  // const handleQuantityChange = (id: number, quantity: number) => {
-  //   setCartItems(
-  //     (prevItems) =>
-  //       prevItems
-  //         .map((item) =>
-  //           item.id === id ? { ...item, quantity: quantity } : item
-  //         )
-  //         .filter((item) => item.quantity > 0) // Ensures items with zero quantity are removed.
-  //   );
-  // };
+  const handleQuantityChange = (id: number, quantity: number) => {
+    setCartItems(
+      (prevItems) =>
+        prevItems
+          .map((item) =>
+            item.id === id ? { ...item, quantity: quantity } : item
+          )
+          .filter((item) => item.quantity > 0) // Ensures items with zero quantity are removed.
+    );
+  };
 
   // Function to calculate the total cost of the items in the cart.
   const calculateTotal = () => {
