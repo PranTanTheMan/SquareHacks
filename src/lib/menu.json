@@ -4,32 +4,817 @@
       "name": "Food",
       "subCategories": [
         {
-          "name": "Appetizers",
+          "name": "VEG APPETIZERS",
           "items": [
             {
-              "header": "Chicken Wings",
-              "description": "Crispy chicken wings served with a choice of sauce.",
+              "header": "MIRAPAKAI BHAJJI (MIRCHI BHAJJI)",
+              "description": "Chillies battered, deep fried indian style and stuffed with onions and peanuts",
               "price": 8.99
             },
             {
-              "header": "Mozzarella Sticks",
-              "description": "Deep-fried mozzarella sticks served with marinara sauce.",
+              "header": "CUT MIRCHI",
+              "description": "Battered chillies double fried and sprinkled with onions, chat masala",
+              "price": 8.99
+            },
+            {
+              "header": "VEGETABLE PAKODA",
+              "description": "Mixed vegetables dipped in chickpea, rice flour batter and deep-fried",
+              "price": 8.99
+            },
+            {
+              "header": "GOBI MANCHURIA",
+              "description": "Stir-fried in sweet & spicy sauce with Chinese spices",
+              "price": 14.99
+            },
+            {
+              "header": "BABY CORN MANCHURIAN",
+              "description": "Stir-fried in sweet & spicy sauce with Chinese spices",
+              "price": 13.99
+            },
+            {
+              "header": "CHILLI GOBI",
+              "description": "Cauliflower seasoned with spices and cooked in chilli soy sauce",
+              "price": 14.99
+            },
+            {
+              "header": "PANEER 65",
+              "description": "Bite sized chunks of indian cheese seasoned with spices and cooked with curry leaves & chillies",
+              "price": 15.99
+            },
+            {
+              "header": "CAULIFLOWER PEPPER FRY (CHEF SPECIAL)",
+              "description": "Cauliflower deep fried, tossed with chilles, pepper & chinese sauces",
+              "price": 14.99
+            },
+            {
+              "header": "MYSORE BONDA",
+              "description": "DEEP FRIED FLOUR BATTER DOLLOPS. CONTAINS YOGURT, FLOUR, GINGER AND CUMMIN SEEDS.",
+              "price": 11.99
+            },
+            {
+              "header": "EGG BONDA",
+              "description": "BOILD EGG DIPPED IN CHICK PEA FLOUR AND FRYED",
+              "price": 10.99
+            },
+            {
+              "header": "TOGO VEG SAMOSA",
+              "description": "",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "NON-VEG APPETIZERS",
+          "items": [
+            {
+              "header": "CHICKEN 65",
+              "description": "Chicken marinated in indian spices and sautéed with fresh ginger-garlic, onions",
+              "price": 15.99
+            },
+            {
+              "header": "CHILLI CHICKEN",
+              "description": "Fried and spicy boneless cubes of chicken marinated in indian spices and sautéed with fresh onions, capsicum and red chillies",
+              "price": 15.99
+            },
+            {
+              "header": "KODI VEPUDU (BONELESS CHICKEN FRY)",
+              "description": "Chicken sauteed with homemade spices and deep-fried with green chillies & cashews",
+              "price": 15.99
+            },
+            {
+              "header": "CHICKEN LOLLIPOP",
+              "description": "Chicken marinated in spicy sauces and deep-fried",
+              "price": 14.99
+            },
+            {
+              "header": "CHICKEN MANCHURIAN",
+              "description": "Boneless chicken mildly spiced and cooked in a wok with special manchurian sauce",
+              "price": 15.99
+            },
+            {
+              "header": "CHICKEN 555 (CHEF SPECIAL)",
+              "description": "Deep fried boneless chicken cooked in special sauce with cashew nuts",
+              "price": 15.99
+            },
+            {
+              "header": "KARAIKUDI PEPPER CHICKEN",
+              "description": "Chicken marinated in spicy sauces and wok tossed with peppercorn",
+              "price": 15.99
+            },
+            {
+              "header": "CHATPATA CHICKEN",
+              "description": "Boneless chicken marinated in yogurt, malt vinegar and wok tossed with select indian spices",
+              "price": 15.99
+            },
+            {
+              "header": "MAMSAM ROAST (GOAT SUKKA)",
+              "description": "Goat marinated and roasted with homemade batter and spices",
+              "price": 18.99
+            },
+            {
+              "header": "KONASEEMA FISH VEPUDU (CHEF SPECIAL)",
+              "description": "Fish is tossed with a spicy Andhra delicacy of ground vepudu karam",
+              "price": 15.99
+            },
+            {
+              "header": "APOLLO FISH",
+              "description": "Spiced batter coated fish deep-fried and tossed with homemade spices",
+              "price": 15.99
+            },
+            {
+              "header": "HYDERABADI TAWA MACHLI (CHEF SPECIAL)",
+              "description": "Fish marinated with homemade sauces, herbs and grilled on tawa",
+              "price": 16.99
+            },
+            {
+              "header": "PRAWNS 65 (CHEF SPECIAL)",
+              "description": "Shrimp cooked in special sauce with curry leaves & chillies",
+              "price": 16.99
+            },
+            {
+              "header": "SHRIMP PEPPER FRY",
+              "description": "Shrimp marinated in house made spices and deep fried",
+              "price": 16.99
+            }
+          ]
+        },
+        {
+          "name": "GRILL",
+          "items": [
+            {
+              "header": "PANEER TIKKA",
+              "description": "Marinated with fresh herbs and spices, grilled to perfection",
+              "price": 15.99
+            },
+            {
+              "header": "TANDOORI CHICKEN",
+              "description": "Chicken marinated overnight in yogurt with herbs, spices and cooked on skewers in tandoor",
+              "price": 15.99
+            },
+            {
+              "header": "CHICKEN TIKKA",
+              "description": "Marinated with fresh herbs and spices, grilled to perfection",
+              "price": 15.99
+            },
+            {
+              "header": "HARYALI CHICKEN TIKKA",
+              "description": "Marinated with fresh herbs and spices, grilled to perfection",
+              "price": 15.99
+            },
+            {
+              "header": "ACHARI CHICKEN TIKKA",
+              "description": "Marinated with fresh herbs and spices, grilled to perfection",
+              "price": 15.99
+            },
+            {
+              "header": "CHICKEN MALAI BOTI",
+              "description": "Cubes of chicken breast marinated with rich creamy sauce and assorted spices",
+              "price": 15.99
+            },
+            {
+              "header": "AFGANI CHICKEN KABAB",
+              "description": "Minced chicken mixed with herbs, spices and grilled in tandoori oven",
+              "price": 15.99
+            },
+            {
+              "header": "TANDOORI SHRIMP",
+              "description": "Shrimp marinated overnight in yogurt with herbs, spices and cooked on skewers in tandoor",
+              "price": 16.99
+            },
+            {
+              "header": "ASORTED TANDOOR SAMPLER",
+              "description": "Assortment of chicken and shrimp grilled in tandoor",
+              "price": 20.99
+            }
+          ]
+        },
+        {
+          "name": "TIFFINS",
+          "items": [
+            {
+              "header": "BABAI IDLY (W.Chutneys)",
+              "description": "Steamed rice and lentil patties, served with chutneys and sambar",
+              "price": 9.99
+            },
+            {
+              "header": "MADURAI VADA (SAMBAR VADA)",
+              "description": "Deep fried lentil donuts immersed in sambar",
+              "price": 10.99
+            },
+            {
+              "header": "MEDU VADA",
+              "description": "Deep fried lentil donuts served with chuntneys and sambar",
+              "price": 9.99
+            },
+            {
+              "header": "PLAIN DOSA",
+              "description": "Thin rice crepe, served with chutneys and sambar",
+              "price": 10.99
+            },
+            {
+              "header": "MASALA DOSA",
+              "description": "Thin rice crepe with house special masala, served with chutneys and sambar",
+              "price": 11.99
+            },
+            {
+              "header": "ONION DOSA",
+              "description": "Thin rice crepe stuffed with onions,served with chutneys and sambar",
+              "price": 11.99
+            },
+            {
+              "header": "SPRING DOSA",
+              "description": "Crispy rice crepe with fresh sauteed vegetables, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "GUNTUR KARAM DOSA",
+              "description": "Special chilli powder coated rice crepe, serverd with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "MYSORE DELIGHT DOSA",
+              "description": "Rice crepe layered with thin spread of spiced lentil chutney, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "PANEER DOSA",
+              "description": "Thin rice crepe stuffed with indian paneer, served with chutneys and sambar",
+              "price": 13.99
+            },
+            {
+              "header": "VEG UTHAPPAM",
+              "description": "Open faced variation of dosa prepeared chopped onions, tomatoes, chillies & cilantro, served with chutney & sambar",
+              "price": 13.99
+            },
+            {
+              "header": "RAVVA DOSA",
+              "description": "Crispy rice crepe made of semolina and wheat, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "CHENNAI ONION RAVVA DOSA",
+              "description": "Crispy rice crepe made of samolina and wheat, stuffed with lightly varamelized onions, served with chutneys and sambar",
+              "price": 13.99
+            },
+            {
+              "header": "MASALA RAVVA DOSA",
+              "description": "Crispy rice crepe made of semolina and wheat served with potato masala, served with chutneys and sambar",
+              "price": 13.99
+            },
+            {
+              "header": "SOUTH INDIAN COMBO",
+              "description": "One mini masala dosa, one idly and one vada, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": " CHETTINAD DOSA EGG",
+              "description": "Rice crepe layered with a spread of veg or egg masala, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "CHETTINAD DOSA VEG",
+              "description": "Rice crepe layered with a spread of veg or egg masala, served with chutneys and sambar",
+              "price": 12.99
+            },
+            {
+              "header": "70MM DOSA",
+              "description": "Thin rice crepe double the size of normal dosa, served with chutneys and sambar",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "ROTI-NAAN",
+          "items": [
+            {
+              "header": "TANDOORI ROTI",
+              "description": "Whole wheat flatbread baked in tanoori oven",
+              "price": 3.49
+            },
+            {
+              "header": "BUTER NAAN",
+              "description": "Traditional unleavened, hand-tossed bread freshly baked in a tandoor oven",
+              "price": 3.49
+            },
+            {
+              "header": "GARLIC NAAN",
+              "description": "Unleavened flat bread mixed with garlic, baked in tandoor",
+              "price": 4.49
+            },
+            {
+              "header": "CHILLI NAAN",
+              "description": "Unleavened flat bread mixed with green chilli, baked in tandoor",
+              "price": 4.49
+            },
+            {
+              "header": "PESHAWARI NAAN",
+              "description": "Sweet unleavened flat bread stuffed with nuts & raisins, baked in tandoor",
+              "price": 4.99
+            },
+            {
+              "header": "ONION KULCHA",
+              "description": "Unleavened flat bread stuffed with seasoned onions, baked in tandoor",
+              "price": 4.49
+            },
+            {
+              "header": "CHAPATHI (2)",
+              "description": "Layered whole wheat bread with butter",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "PURI-PARATHA",
+          "items": [
+            {
+              "header": "BATURA (2)pc",
+              "description": "Deep-fried puffed wheat bread served",
+              "price": 4.99
+            },
+            {
+              "header": "PURI (2)pc",
+              "description": "Deep-fried puffed wheat bread served",
+              "price": 4.99
+            },
+            {
+              "header": "ALOO PARATHA",
+              "description": "Layered whole wheat bread stuffed with potatoes",
+              "price": 5.99
+            },
+            {
+              "header": "PANEER PARATHA",
+              "description": "Layered whole wheat bread stuffed with indian paneer",
+              "price": 5.99
+            },
+            {
+              "header": "PURI MASALA",
+              "description": "Deep-fried puffed wheat bread served with potatoes cooked in caramelized onions & tomato gravy",
+              "price": 13.99
+            },
+            {
+              "header": "CHOLE BATURA (DELHI SPECIAL)",
+              "description": "Deep-fried puffed wheat bread served with chickpeas cooked in tomato and onion gravy",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "INDO CHINESE",
+          "items": [
+            {
+              "header": "KAMAT FRIED RICE",
+              "description": "Wok tossed indo chinese style fried rice with mix vegetables",
+              "price": 13.99
+            },
+            {
+              "header": "CURRY FRIED RICE",
+              "description": "Rice tossed with yellow curry, chopped mix vegetables and soy sauce",
+              "price": 13.99
+            },
+            {
+              "header": "SZECHWAN FRIED RICE",
+              "description": "Fiery in nature, rice tossed with chopped mix vegetables, red chilli paste, , Indian spices & Chinese sauces",
+              "price": 13.99
+            },
+            {
+              "header": "STREET NOODLES",
+              "description": "Steamed noodles wok tossed with chopped mix vegetables in indian spices & chinese sauces",
+              "price": 13.99
+            },
+            {
+              "header": "CURRY NOODLES",
+              "description": "Steamed noodles tossed with yellow curry, chopped mix vegetables and soy sauce",
+              "price": 13.99
+            },
+            {
+              "header": "SZECHWAN NOODLES",
+              "description": "Fiery in nature, steamed noodles tossed with chopped mix vegetables, red chilli paste, indian spices & chinese sauces",
+              "price": 13.99
+            },
+            {
+              "header": "SINGAPORE NOODLES",
+              "description": "Chicken, shrimp and egg with mix vegetables",
+              "price": 16.99
+            }
+          ]
+        },
+        {
+          "name": "RICE BIRYANIS",
+          "items": [
+            {
+              "header": "HYDERABAD DUM BIRYANI",
+              "description": "Meat or Vegetables marinated in herbs, spices & yogurt. Cooked with saffron basmati dum rice. Hyderabadi style",
+              "price": 13.99
+            },
+            {
+              "header": "CHICKEN BONELESS BIRYANI",
+              "description": "Chicken cooked in chef special biryani sauce & mixed with biryani dum rice",
+              "price": 16.99
+            },
+            {
+              "header": "CHICKEN 65 BIRYANI",
+              "description": "Boneless chicken cooked in chef special 65 sauce & mixed with biryani dum rice",
+              "price": 16.99
+            },
+            {
+              "header": "PANEER BIRYANI",
+              "description": "Indian cottage cheese cooked in chef special biryani sauce & mixed with biryani dum rice",
+              "price": 15.99
+            },
+            {
+              "header": "FAMILY PACK BIRYANI",
+              "description": "Meat or Vegetables marinated in herbs, spices & yogurt. Cooked with saffron basmati dum rice.",
+              "price": 31.99
+            },
+            {
+              "header": "BUCKET BIRYANI",
+              "description": "Meat or Vegetables marinated in herbs, spices & yogurt. Cooked with saffron basmati dum rice.",
+              "price": 31.99
+            },
+            {
+              "header": "JEERA RICE",
+              "description": "Aromatic basmati rice sauteed with Cumin Seeds & Garnished with cilantro.",
+              "price": 9.99
+            },
+            {
+              "header": "PEAS PULAO",
+              "description": "Aromatic basmati rice sauteed with Peas & Cumin seeds, Garnished with cilantro.",
+              "price": 11.99
+            },
+            {
+              "header": "LEMON RICE",
+              "description": "Aromatic basmati rice mixed with fresh squeezed lemon juice and tempered with groundnuts, chilli and curry leaves",
+              "price": 11.99
+            },
+            {
+              "header": "SAMBAR RICE",
+              "description": "Lentils, mix vegetables & rice cooked together with select south indian spices",
+              "price": 11.99
+            },
+            {
+              "header": "CURD RICE (YOGURT RICE)",
+              "description": "Rice mixed with yogurt",
+              "price": 11.99
+            },
+            {
+              "header": "GOAT DUM BIRYANI",
+              "description": "",
+              "price": 18.99
+            },
+            {
+              "header": "BUCKET GOAT BIRYANI",
+              "description": "Only Takeout",
+              "price": 46.99
+            },
+            {
+              "header": "SHAHI GOAT BIRYANI",
+              "description": "",
+              "price": 18.99
+            },
+            {
+              "header": "SHAHI VEG PULAO",
+              "description": "",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "VEGETARIAN CURRIES",
+          "items": [
+            {
+              "header": "TOMATO DAL",
+              "description": "Lentils cooked with fresh herbs, fine chopped onions, tomatos and cilantro",
+              "price": 13.99
+            },
+            {
+              "header": "NEW DELHI CHANA MASALA",
+              "description": "Seasoned garbanzo beans cooked in a flavorful onions, tomatoes and cilantro.",
+              "price": 13.99
+            },
+            {
+              "header": "MIX VEGETABLES CURRY",
+              "description": "Mixed vegetables sautéed in a spicy curry sauce",
+              "price": 13.99
+            },
+            {
+              "header": "DAL MAKANI",
+              "description": "Black lentils cooked with fresh herbs, fine chopped onions, ginger, garlic and tomatoes.",
+              "price": 13.99
+            },
+            {
+              "header": "MANGO DAL",
+              "description": "Lentils cooked with fresh herbs,mango, fine chopped onions, tomatos and cilantro",
+              "price": 13.99
+            },
+            {
+              "header": "EGGPLANT MASALA",
+              "description": "Fried eggplant cooked with fresh tomatoes and onions in mild gravy",
+              "price": 14.99
+            },
+            {
+              "header": "PALAK PANNER",
+              "description": "Spinach cooked in a creamy sauce with chunks of paneer(indian cheese)",
+              "price": 14.99
+            },
+            {
+              "header": "METHI MALAI MUTTER PANNER",
+              "description": "Fresh chunks of paneer (Indian cheese) cooked with green peas, fenugreek leaves, onions and tomatoes in mild cream",
+              "price": 14.99
+            },
+            {
+              "header": "PANNER TIKKA MASALA",
+              "description": "Chunks of paneer (indian cheese) cooked in pecial sauce with finely chopped onions, tomatoes and ginger",
+              "price": 14.99
+            },
+            {
+              "header": "KADAI PANEER",
+              "description": "Chunks of paneer (indian cheese) simmered with onion and green chillies in a mildly spiced curry sauce",
+              "price": 14.99
+            },
+            {
+              "header": "MALAI KOFTA",
+              "description": "Mashed potato with minced veggies & paneer rolled into balls cooked in a yellow curry sauce",
+              "price": 14.99
+            },
+            {
+              "header": "NAVARATAN KORMA",
+              "description": "Freshly seasonal vegetables and chunks of paneer (indian cheese) cooked in rich creamy sauce",
+              "price": 14.99
+            },
+            {
+              "header": "VEGETABLE CHETTINAD",
+              "description": "Mixed vegetables cooked in house made chettinad spices, pepper, mustard seed and curry leaves",
+              "price": 14.99
+            },
+            {
+              "header": "PANNER MAKHANI",
+              "description": "Chunks of paneer (indian cheese), simmered with tomatoes, cashews, spices & cream",
+              "price": 14.99
+            },
+            {
+              "header": "METHI CHAMAN (Shredded Panner Methi)",
+              "description": "Shredded paneer (indian cheese) cooked with fenugreek leaves, onions in mild cream",
+              "price": 14.99
+            },
+            {
+              "header": "BHINDI MASALA",
+              "description": "",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "NON-VEGETARIAN CURRIES",
+          "items": [
+            {
+              "header": "KADAI",
+              "description": "Choice of meat simmered with onion and green peppers in a mildly spiced curry sauce and garnished with fresh cilantro",
+              "price": 14.99
+            },
+            {
+              "header": "VINDALOO",
+              "description": "Choice of meat and potatoes sautéed in spicy tangry sauce",
+              "price": 14.99
+            },
+            {
+              "header": "CURRY",
+              "description": "Choice of meat cooked with onions, tomatoes, ginger, garlic and special sauce made with fresh ground spices",
+              "price": 14.99
+            },
+            {
+              "header": "HYDERABADI",
+              "description": "Choice of meat cooked in herbs and spices with fresh green mango",
+              "price": 14.99
+            },
+            {
+              "header": "ROGAN JOSH",
+              "description": "Choice of meat cooked in think yogurt base sauce and spices",
+              "price": 14.99
+            },
+            {
+              "header": "TIKKA MASALA",
+              "description": "Choice of meat cooked in medium sauce, blended with spices like onion, ginger, garlic, coriander, turmeric and chilli powder",
+              "price": 14.99
+            },
+            {
+              "header": "SHAHI KORMA",
+              "description": "Choice of meat cooked in mild korma sauce and simmered in coconut, cashews and poppy seeds with flavored indian spices",
+              "price": 14.99
+            },
+            {
+              "header": "CHETTINAD",
+              "description": "Choice of meat cooked in house made chettinad spices, pepper, mustard seed and curry leaves",
+              "price": 14.99
+            },
+            {
+              "header": "METHI",
+              "description": "Choice of meat marinated in the house spices and slow cooked with methi leaves, sour cream, black pepper, ginger and garlic",
+              "price": 14.99
+            },
+            {
+              "header": "KASURI METHI MALAI",
+              "description": "Choice of meat marinated in the house spices and slow cooked with methi leaves, sour cream, black pepper, ginger and garlic",
+              "price": 14.99
+            },
+            {
+              "header": "CHICKEN MAKHANI",
+              "description": "Boneless chicken cooked in butter (makhan) and cream (malai)",
+              "price": 15.99
+            },
+            {
+              "header": "BUTTER CHICKEN",
+              "description": "Tender chicken cooked in creamy butter sauce",
+              "price": 15.99
+            },
+            {
+              "header": "CHICKEN MUGHLAI",
+              "description": "Boneless Chicken cooked in yogurt sauce, cashew & almond paste",
+              "price": 15.99
+            },
+            {
+              "header": "CHCIKEN KALI MIRCHI",
+              "description": "Chicken marinated in yogurt, blackpepper, cooked with onions, tomatoes & select indian spices",
+              "price": 15.99
+            },
+            {
+              "header": "FISH MASALA",
+              "description": "Fish cooked with onions and tomatoes in a mild curry sauce",
+              "price": 16.99
+            },
+            {
+              "header": "SHRIMP MASALA",
+              "description": "Shrimp cooked with onions and tomatoes in a mild curry sauce",
+              "price": 16.99
+            },
+            {
+              "header": "MUTTON DALCHA (HOUSE SEPCIAL)",
+              "description": "Made with juicy mutton, chana dal and a host of spices",
+              "price": 18.99
+            },
+            {
+              "header": "GOAT KALI MIRCHI",
+              "description": "Goat marinated in yogurt, blackpepper, cooked with onions, tomatoes & select indian spices",
+              "price": 18.99
+            },
+            {
+              "header": "EGG MASALA",
+              "description": "",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "SIDES",
+          "items": [
+            {
+              "header": "Aloo Masala",
+              "description": "",
+              "price": 2.99
+            },
+            {
+              "header": "RAITHA",
+              "description": "",
+              "price": 1.49
+            },
+            {
+              "header": "SALAN",
+              "description": "",
+              "price": 1.49
+            },
+            {
+              "header": "SAMBAR 8 0Z",
+              "description": "",
+              "price": 3.49
+            },
+            {
+              "header": "SAMBAR 16 OZ",
+              "description": "",
+              "price": 5.99
+            },
+            {
+              "header": "Sambar 32 OZ",
+              "description": "",
+              "price": 10.99
+            },
+            {
+              "header": "SMALL WHITE RICE BOWL",
+              "description": "",
+              "price": 1.99
+            },
+            {
+              "header": "LARGE WHITE RICE BOWL",
+              "description": "",
+              "price": 3.99
+            },
+            {
+              "header": "Paapad",
+              "description": "",
+              "price": 2.99
+            },
+            {
+              "header": "PAAN",
+              "description": "",
+              "price": 1.99
+            },
+            {
+              "header": "SALAD",
+              "description": "",
+              "price": 2.99
+            },
+            {
+              "header": "Boiled Egg",
+              "description": "",
+              "price": 0.99
+            },
+            {
+              "header": "plain yogurt",
+              "description": "",
+              "price": 1.99
+            },
+            {
+              "header": "sambar 4oz",
+              "description": "",
+              "price": 2.99
+            }
+          ]
+        },
+        {
+          "name": "SOUPS",
+          "items": [
+            {
+              "header": "HOT AND SOUR MIX-VEGETABLES",
+              "description": "",
+              "price": 6.49
+            },
+            {
+              "header": "HOT AND SOUR CHICKEN",
+              "description": "",
               "price": 6.99
             }
           ]
         },
         {
-          "name": "Main Course",
+          "name": "DESSERTS",
           "items": [
             {
-              "header": "Grilled Salmon",
-              "description": "Freshly grilled salmon served with roasted vegetables.",
-              "price": 15.99
+              "header": "BENGALI GULAB JAMUN",
+              "description": "Pastry ball made from milk dough fried until golden brown, served in sugary syrup with cardamom",
+              "price": 3.99
             },
             {
-              "header": "Pasta Carbonara",
-              "description": "Classic pasta dish with bacon, eggs, and Parmesan cheese.",
-              "price": 12.99
+              "header": "RASGULLA",
+              "description": "A syrupy dessert with sponge variant balls.",
+              "price": 5.99
+            },
+            {
+              "header": "RASMALAI",
+              "description": "Homemade flat cakes made with creamed cheese, then soaked in sweet thickened milk and garnished with pistachios",
+              "price": 5.99
+            },
+            {
+              "header": "GAJAR KA HALWA",
+              "description": "Rich dessert made with fresh carrots, milk and sugar encapsulated within the generous amount of ghee",
+              "price": 5.99
+            },
+            {
+              "header": "KHEER",
+              "description": "",
+              "price": 5.99
+            }
+          ]
+        },
+        {
+          "name": "KIDS SPECIAL",
+          "items": [
+            {
+              "header": "HAKKA NOODLES Kids",
+              "description": "Steamed noodles wok tossed with chopped mix vegetables in indian spices & chinese sauces",
+              "price": 7.99
+            },
+            {
+              "header": "FRIED RICE Kids",
+              "description": "Wok tossed indo chinese style fried rice with mix vegetables",
+              "price": 7.99
+            },
+            {
+              "header": "CHOCOLATE DOSA (WITH NUTELLA)",
+              "description": "Nutella stuffed crepe",
+              "price": 8.99
+            },
+            {
+              "header": "GEOMENTRY DOSA (TRIANGLE SHAPED DOSA)",
+              "description": "Cone shaped crepe, crispy in style and served with jam",
+              "price": 7.99
+            },
+            {
+              "header": "MICKEY DOSA",
+              "description": "Mickey mouse shaped crepe served with jam",
+              "price": 7.99
+            },
+            {
+              "header": "Hot chocklate drink (Boost)",
+              "description": "",
+              "price": 3.99
             }
           ]
         }
@@ -39,56 +824,85 @@
       "name": "Drinks",
       "subCategories": [
         {
-          "name": "Soft Drinks",
+          "name": "",
           "items": [
             {
-              "header": "Coca-Cola",
-              "description": "Classic cola drink.",
+              "header": "MANGO LASSI",
+              "description": "Mango and Yogurt drink",
+              "price": 3.99
+            },
+            {
+              "header": "COCA COLA",
+              "description": "",
+              "price": 2.49
+            },
+            {
+              "header": "DIET COKE",
+              "description": "",
+              "price": 2.49
+            },
+            {
+              "header": "FANTA ORANGE",
+              "description": "",
+              "price": 2.49
+            },
+            {
+              "header": "SPRITE",
+              "description": "",
+              "price": 2.49
+            },
+            {
+              "header": "LIMCA",
+              "description": "",
               "price": 2.99
             },
             {
-              "header": "Sprite",
-              "description": "Lemon-lime flavored carbonated drink.",
-              "price": 2.99
-            }
-          ]
-        },
-        {
-          "name": "Cocktails",
-          "items": [
+              "header": "BUTTERMILK (WITH GINGER)",
+              "description": "Homemade whisked yogurt drink mixed with ginger",
+              "price": 3.99
+            },
             {
-              "header": "Mojito",
-              "description": "Refreshing cocktail made with rum, lime, mint, and soda water.",
+              "header": "CHENNAI COFFEE",
+              "description": "Indian hot coffee",
+              "price": 3.49
+            },
+            {
+              "header": "MASALA CHAI",
+              "description": "Indian hot tea",
+              "price": 2.99
+            },
+            {
+              "header": "SALT LASSI",
+              "description": "Yogurt drink with salt",
+              "price": 3.49
+            },
+            {
+              "header": "SWEET LASSI",
+              "description": "Sweet yogurt drink",
+              "price": 3.99
+            },
+            {
+              "header": "Cork Fee",
+              "description": "",
               "price": 7.99
             },
             {
-              "header": "Cosmopolitan",
-              "description": "Vodka-based cocktail with cranberry juice and lime.",
-              "price": 8.99
+              "header": "SUGAR CANE JUICE",
+              "description": "",
+              "price": 4.99
+            },
+            {
+              "header": "LEMONADE",
+              "description": "",
+              "price": 2.49
             }
           ]
         }
       ]
     },
     {
-      "name": "Chaat",
-      "subCategories": [
-        {
-          "name": "Street Food",
-          "items": [
-            {
-              "header": "Pani Puri",
-              "description": "Crispy hollow puris filled with spicy mint water.",
-              "price": 4.99
-            },
-            {
-              "header": "Bhel Puri",
-              "description": "Savory snack made with puffed rice, vegetables, and chutneys.",
-              "price": 5.99
-            }
-          ]
-        }
-      ]
+      "name": "CHAAT",
+      "subCategories": []
     }
   ]
 }
