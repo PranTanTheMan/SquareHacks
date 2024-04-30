@@ -1,0 +1,94 @@
+{
+  "categories": [
+    {
+      "name": "Food",
+      "subCategories": [
+        {
+          "name": "Appetizers",
+          "items": [
+            {
+              "header": "Chicken Wings",
+              "description": "Crispy chicken wings served with a choice of sauce.",
+              "price": 8.99
+            },
+            {
+              "header": "Mozzarella Sticks",
+              "description": "Deep-fried mozzarella sticks served with marinara sauce.",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Main Course",
+          "items": [
+            {
+              "header": "Grilled Salmon",
+              "description": "Freshly grilled salmon served with roasted vegetables.",
+              "price": 15.99
+            },
+            {
+              "header": "Pasta Carbonara",
+              "description": "Classic pasta dish with bacon, eggs, and Parmesan cheese.",
+              "price": 12.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "subCategories": [
+        {
+          "name": "Soft Drinks",
+          "items": [
+            {
+              "header": "Coca-Cola",
+              "description": "Classic cola drink.",
+              "price": 2.99
+            },
+            {
+              "header": "Sprite",
+              "description": "Lemon-lime flavored carbonated drink.",
+              "price": 2.99
+            }
+          ]
+        },
+        {
+          "name": "Cocktails",
+          "items": [
+            {
+              "header": "Mojito",
+              "description": "Refreshing cocktail made with rum, lime, mint, and soda water.",
+              "price": 7.99
+            },
+            {
+              "header": "Cosmopolitan",
+              "description": "Vodka-based cocktail with cranberry juice and lime.",
+              "price": 8.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chaat",
+      "subCategories": [
+        {
+          "name": "Street Food",
+          "items": [
+            {
+              "header": "Pani Puri",
+              "description": "Crispy hollow puris filled with spicy mint water.",
+              "price": 4.99
+            },
+            {
+              "header": "Bhel Puri",
+              "description": "Savory snack made with puffed rice, vegetables, and chutneys.",
+              "price": 5.99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
