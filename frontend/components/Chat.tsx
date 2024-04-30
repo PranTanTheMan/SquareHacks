@@ -31,11 +31,11 @@ const Chat: React.FC = () => {
     return null;
   };
 
-  const handleCheckout = (message: Message): string | "" => {
+  const handleCheckout = (message: Message): boolean | "" => {
     if (message.role === "assistant" && message.content.toLowerCase().includes("checkout")) {
-      return "Please put in your bank details below to place your order";
+      return true;
     }
-    return "";
+    return false;
   };
 
   return (

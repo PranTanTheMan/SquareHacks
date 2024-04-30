@@ -10,7 +10,7 @@ interface ChatMessagesProps {
     description: string;
     price: number;
   } | null;
-  handleCheckout: (message: Message) => string | "";
+  handleCheckout: (message: Message) => boolean | "";
 }
 
 const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, handleCheckout }) => {
@@ -48,7 +48,7 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, hand
             ))}
             <p className="text-sm text-gray-500">{message.role} {message.createdAt ? new Date(message.createdAt).toLocaleString() : 'Unknown Date'}</p>
             {handleFoods(message) !== null && <ChatProduct data={handleFoods(message)} />}
-            {handleCheckout(message) === "Please put in your bank details below to place your order" && <Payment onOrderPlaced={() => {}} />}
+            {handleCheckout(message) ? <Payment onOrderPlaced={() => {}} />: <> </>} 
           </div>
         </div>
       ))}
