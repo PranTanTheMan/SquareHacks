@@ -44,7 +44,7 @@ const Chat: React.FC = () => {
     return null;
   };
 
-  const handleCheckout = (message: Message): boolean | "" => {
+  const handleCheckout = (message: Message): boolean => {
     if (
       message.role === "assistant" &&
       message.content.toLowerCase().includes("checkout")
@@ -89,9 +89,10 @@ const Chat: React.FC = () => {
     return null;
   };
 
-  // const foodInMessages = messages
-  //   .map((message) => handleFoods(message))
-  //   .filter((food) => food !== null);
+  const handleOrderPlaced = () => {
+    // Handle order placed logic here
+    console.log("Order placed!");
+  };
 
   return (
     <>
@@ -102,6 +103,7 @@ const Chat: React.FC = () => {
             handleFoods={handleFoods}
             handleCheckout={handleCheckout}
             messages={messages}
+            onOrderPlaced={handleOrderPlaced}
           />
           <ChatInput
             handleSubmit={handleSubmit}
