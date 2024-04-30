@@ -14,8 +14,7 @@ interface FoodItem {
 }
 
 interface ProductCartProps {
-  foods: any[];
-  handleQuantityChange: (id: number, quantity: number) => void;
+  foods: FoodItem[];
 }
 
 const ProductCart: React.FC<ProductCartProps> = ({ foods }) => {
@@ -71,15 +70,15 @@ const ProductCart: React.FC<ProductCartProps> = ({ foods }) => {
           </div>
         ) : (
           <div style={{ overflowY: "auto", maxHeight: "calc(100vh - 200px)" }}>
-            {foods.map((food) => (
+            {cartItems.map((item) => (
               <ProductCard
-                key={food.id}
-                id={food.id}
-                name={food.name}
-                price={food.price}
-                quantity={food.quantity}
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                price={`$${item.price.toFixed(2)}`}
+                quantity={item.quantity}
                 handleQuantityChange={handleQuantityChange}
-                description={food.description}
+                description={item.description}
               />
             ))}
           </div>
@@ -104,15 +103,15 @@ const ProductCart: React.FC<ProductCartProps> = ({ foods }) => {
             <div
               style={{ overflowY: "auto", maxHeight: "calc(100vh - 200px)" }}
             >
-              {foods.map((food) => (
+              {cartItems.map((item) => (
                 <ProductCard
-                  key={food.id}
-                  id={food.id}
-                  name={food.name}
-                  price={food.price}
-                  quantity={food.quantity}
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  price={`$${item.price.toFixed(2)}`}
+                  quantity={item.quantity}
                   handleQuantityChange={handleQuantityChange}
-                  description={food.description}
+                  description={item.description}
                 />
               ))}
             </div>

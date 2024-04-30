@@ -119,9 +119,7 @@ const Chat: React.FC = () => {
     return false;
   };
 
-  const addToCart = (
-    message: Message
-  ): { name: string; description: string; price: number } | null => {
+  const addToCart = (message: Message) => {
     for (const food of test) {
       if (
         message.role === "user" &&
@@ -130,9 +128,12 @@ const Chat: React.FC = () => {
         return food;
       }
     }
-    // Return null when no matching food is found
     return null;
   };
+
+  const foodInMessages = messages
+    .map((message) => handleFoods(message))
+    .filter((food) => food !== null);
 
   const handleOrderPlaced = () => {
     // Handle order placed logic here
@@ -156,15 +157,7 @@ const Chat: React.FC = () => {
             input={input}
           />
         </div>
-        <ProductCart
-          foods={cartItems}
-          handleQuantityChange={(id: number, quantity: number) => {
-            const updatedCartItems = cartItems.map((item) =>
-              item.id === id ? { ...item, quantity } : item
-            );
-            setCartItems(updatedCartItems);
-          }}
-        />
+        <ProductCart foods={foodInMessages} />
       </div>
     </>
   );
