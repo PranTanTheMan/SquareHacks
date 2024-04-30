@@ -1,4 +1,4 @@
-import fs from "fs";
+import { promises as fs } from "fs";
 import { OpenAI } from "openai";
 
 const openai = new OpenAI({
@@ -6,7 +6,8 @@ const openai = new OpenAI({
 });
 
 export async function generateEmbeddings() {
-  const menuData = JSON.parse(fs.readFileSync("menu.json", "utf-8"));
+  const file = await fs.readFile(process.cwd() + "./menu.json", "utf8");
+  const menuData = JSON.parse(file);
 
   const embeddings = await Promise.all(
     menuData.map(async (item: any) => {
