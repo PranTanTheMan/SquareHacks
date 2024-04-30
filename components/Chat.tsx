@@ -23,13 +23,7 @@ const Chat: React.FC = () => {
     { id: 1, name: "curry", price: 20, quantity: 1, description: "fnfanf" },
     { id: 2, name: "chicken", price: 20, quantity: 1, description: "fnfanf" },
     { id: 3, name: "lemonade", price: 20, quantity: 1, description: "fnfanf" },
-    {
-      id: 4,
-      name: "butter chicken",
-      price: 20,
-      quantity: 1,
-      description: "fnfanf",
-    },
+    {id: 4, name: "butter chicken", price: 20, quantity: 1, description: "fnfanf"},
     { id: 5, name: "beef", price: 20, quantity: 1, description: "fnfanf" },
     { id: 6, name: "rice", price: 20, quantity: 1, description: "fnfanf" },
   ];
@@ -45,7 +39,7 @@ const Chat: React.FC = () => {
     return null;
   };
 
-  const handleCheckout = (message: Message): boolean | "" => {
+  const handleCheckout = (message: Message): boolean => {
     if (
       message.role === "assistant" &&
       message.content.toLowerCase().includes("checkout")
@@ -90,9 +84,10 @@ const Chat: React.FC = () => {
     return null;
   };
 
-  // const foodInMessages = messages
-  //   .map((message) => handleFoods(message))
-  //   .filter((food) => food !== null);
+  const handleOrderPlaced = () => {
+    // Handle order placed logic here
+    console.log("Order placed!");
+  };
 
   return (
     <>
@@ -103,6 +98,7 @@ const Chat: React.FC = () => {
             handleFoods={handleFoods}
             handleCheckout={handleCheckout}
             messages={messages}
+            onOrderPlaced={handleOrderPlaced}
           />
           <ChatInput
             handleSubmit={handleSubmit}
