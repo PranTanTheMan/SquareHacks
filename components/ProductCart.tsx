@@ -16,6 +16,7 @@ interface FoodItem {
 interface ProductCartProps {
   foods: any[];
   handleQuantityChange: (id: number, quantity: number) => void;
+  
 }
 
 const ProductCart: React.FC<ProductCartProps> = ({
