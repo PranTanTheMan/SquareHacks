@@ -902,7 +902,18 @@
     },
     {
       "name": "CHAAT",
-      "subCategories": []
+      "subCategories": [
+        {
+          "name": "",
+          "items": [
+            {
+              "header": "Samosa Chaat",
+              "description": "Samosa topped with chickpeas, onions, tomatoes, yogurt, tamarind and mint chutney",
+              "price": 5.99
+            }
+          ]
+        }
+      ]
     }
   ]
 }
