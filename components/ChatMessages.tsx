@@ -11,9 +11,14 @@ interface ChatMessagesProps {
     price: number;
   } | null;
   handleCheckout: (message: Message) => boolean | "";
+  addToCart: (message: Message) => {
+    name: string;
+    description: string;
+    price: number;
+  };
 }
 
-const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, handleCheckout }) => {
+const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, handleCheckout, addToCart }) => {
   return (
     <div className="flex flex-col h-5/6 overflow-y-auto bg-white shadow-lg rounded-lg pt-5">
       {/* Welcome message */}
