@@ -10,15 +10,16 @@ interface ChatMessagesProps {
     description: string;
     price: number;
   } | null;
-  handleCheckout: (message: Message) => boolean | "";
+  handleCheckout: (message: Message) => boolean;
   addToCart: (message: Message) => {
     name: string;
     description: string;
     price: number;
   };
+  onOrderPlaced: () => void;
 }
 
-const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, handleCheckout, addToCart }) => {
+const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, handleCheckout, addToCart, onOrderPlaced }) => {
   return (
     <div className="flex flex-col h-5/6 overflow-y-auto bg-white shadow-lg rounded-lg pt-5">
       {/* Welcome message */}
@@ -53,7 +54,7 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, handleFoods, hand
             ))}
             <p className="text-sm text-gray-500">{message.role} {message.createdAt ? new Date(message.createdAt).toLocaleString() : 'Unknown Date'}</p>
             {handleFoods(message) !== null && <ChatProduct data={handleFoods(message)} />}
-            {handleCheckout(message) ? <Payment onOrderPlaced={() => {}} />: <> </>} 
+            {handleCheckout(message) && <Payment onOrderPlaced={onOrderPlaced} />}
           </div>
         </div>
       ))}
