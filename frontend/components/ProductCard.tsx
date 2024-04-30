@@ -22,38 +22,22 @@ const ProductCard: React.FC<ProductCardProps> = ({
   description,
 }) => {
   return (
-    <div
-      style={{
-        width: '400px',
-        backgroundColor: 'white',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '10px',
-        margin: '10px',
-      }}
-    >
-      <h3 style={{ margin: '0', padding: '0', fontWeight: 'bold', textAlign: 'left', width: '100%' }}>
-        {name}
-      </h3>
-      <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', width: '100%' }}>
+    <div className=' w-auto xl:w-[400px] rouned-lg bg-white shadow-md flex flex-col p-3 m-3'>
+      <h3 className='font-bold text-left w-full'>{name}</h3>
+      <div className='flex justify-end items-center w-full'>
         <select
           value={quantity}
           onChange={(e) => handleQuantityChange(id, parseInt(e.target.value))}
-          style={{ margin: '0 5px 0 0', padding: '0', textAlign: 'right' }}
-        >
+          className='text-right mr-5'>
           {Array.from({ length: 11 }, (_, i) => (
             <option key={i} value={i}>{i}</option>
           ))}
         </select>
-        <span style={{ margin: '0', padding: '0', textAlign: 'right' }}>
+        <span className='text-right'>
           x {price}
         </span>
       </div>
-      <p style={{ margin: '0', padding: '0', textAlign: 'left', width: '100%' }}>
-        {description}
-      </p>
+      <p className='text-left w-full'>{description}</p>
     </div>
   );
 };

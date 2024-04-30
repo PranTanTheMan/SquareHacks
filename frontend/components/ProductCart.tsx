@@ -53,7 +53,7 @@ const ProductCart: React.FC = () => {
       <button onClick={toggleCart} className='fixed top-5 right-5 z-40 lg:hidden'>
         <Image src="/cart.png" width={40} height={40} alt="Toggle Cart" />
       </button>
-      <div className='hidden lg:rounded-lg lg:shadow-lg lg:m-8 lg:p-5 lg:block lg:h-full bg-white '>
+      <div className='hidden lg:rounded-lg lg:shadow-lg lg:m-8 lg:p-5 lg:block lg:h-full bg-white'>
           <h2 className=' text-2xl font-bold mb-4' >Shopping Cart</h2>
           {cartItems.length === 0 ? (
             <div className='text-blue-600 bg-blue-200 w-[400px] rounded-lg p-3 text-left mx-auto my-3'>
